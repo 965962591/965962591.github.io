@@ -5,12 +5,12 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="http://965962591.github.io">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://965962591.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -152,39 +152,148 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-记录一次网络分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/26/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/11/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90/">记录一次网络分析</a>
     </h1>
   
 
         
-        <a href="/2020/11/26/hello-world/" class="archive-article-date">
-  	<time datetime="2020-11-26T07:39:04.008Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-26</time>
+        <a href="/2020/11/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2020-11-26T12:01:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h4 id="Itheima课程资源简单分析"><a href="#Itheima课程资源简单分析" class="headerlink" title="Itheima课程资源简单分析"></a>Itheima课程资源简单分析</h4><p>1、背景介绍</p>
+<p>2、工具准备</p>
+<p>3、抓取并分析网络请求</p>
+<p>4、注意事项</p>
+<p>5、总结</p>
+<p>6、声明</p>
+<h5 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h5><p>Itheima是我们在学习路上的一座绕不开的丰碑，升值我们的大学课本都是采用黑马家的，Java课程更是其最核心的内容，就解决了不少我学习上的困惑，秉持学习的态度，我抓包其课程的内容，希望可以有所收获。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//m.boxuegu.com/class/outline-1112</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<img class="-20201126164036863.png">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>图中的<code>courseId</code>即课程名，返回的响应体是JSON类型的</p>
+<p>格式化一下返回的JSON</p>
+<img class="-20201126165406917.png">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>可以看出返回的是所有课程大纲，有几个比较重要的关键字需要提取一下<code>moduleId</code>、<code>isTry=1</code>、<code>sectionId</code>就是请求到的比较重要的字段，有了这些字段，继续后面的请求分析</p>
+<h4 id="2、工具准备"><a href="#2、工具准备" class="headerlink" title="2、工具准备"></a>2、工具准备</h4><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>itheima网站</td>
+<td>我们需要抓包的网站</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>调试所使用的浏览器</td>
+</tr>
+<tr>
+<td>Thor+Anubis+在线工具</td>
+<td>手机上抓包+重放+正则+去重</td>
+</tr>
+<tr>
+<td>Postman</td>
+<td>接口批量测试</td>
+</tr>
+</tbody></table>
+<h4 id="3、抓包调试"><a href="#3、抓包调试" class="headerlink" title="3、抓包调试"></a>3、抓包调试</h4><p><strong>获取全部课程大纲moduleId</strong></p>
+<p>1、向服务器请求，并获取到返回的JSON数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://m.boxuegu.com/portalApp/bxg/course/v2/1112/chapter?courseId=1112</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>2、处理返回的JSON</p>
+<img class="-20201126184127394.png">
+
+<ul>
+<li><p>正则匹配出<code>moduleId</code></p>
+<ul>
+<li>正则表达式：<code>moduleId&quot;: \d+</code>匹配出 moduleId: 105695</li>
+<li>再一次正则匹配<code>\d+</code>获得纯数字的moduleId如：105695</li>
+</ul>
+</li>
+<li><p>去重，去除返回的JSON中有重复的部分</p>
+</li>
+<li><p>制作成<code>moduleId.txt</code>备用</p>
+</li>
+</ul>
+<p><strong>获取全部课程名</strong></p>
+<p>1、点击可以试看的内容进行观看，获取试看视频的数据包进行分析<br>        2、查找到关键的链接，进行分析</p>
+<p><strong>关键链接1</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.boxuegu.com/ccVideo/getCcVerificationCode?<span class="built_in">type</span>=D&amp;studentId=xxxx&amp;videoId=10178456&amp;courseId=1112&amp;moduleId=105695&amp;sign=xxxx</span><br></pre></td></tr></table></figure>
+
+<p>关键字段1：<code>studentId</code>，分配的学生id</p>
+<p>关键字段2：<code>vedioId</code>，视频的id</p>
+<p>关键字段3：<code>courseId</code>，课程id，对于本课程来说id值为1112</p>
+<p>关键字段4：<code>moduleId</code>，大纲的moduleId，用来请求大纲下的具体课程内容</p>
+<p>关键字段5：<code>sign</code>，用来鉴权的加密字段，为MD5加密（32位小写字母加数字组成）在cookie中可以提取</p>
+<p><strong>作用</strong></p>
+<p>响应体中包含着，用来获取到视频播放的鉴权值<code>verificationcode</code>，==&gt;后面将变成<code>vc</code>拼接到具体视频播放的URL中，非常关键。</p>
+<p><strong>关键链接2</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://m.boxuegu.com/portalApp/coursePlay/getCourseKnowledgeTree?studentId=xxxxx&amp;moduleId=102659&amp;courseId=1112&amp;<span class="built_in">type</span>=PATH&amp;isTry=<span class="literal">false</span>&amp;sign=xxxxxxx</span><br></pre></td></tr></table></figure>
+
+<p>关键字段1：<code>isTry</code>，就用鉴权是否为试看用户，如果<code>isTry=true</code>就表示：试看用户，服务器返回的JSON数据就不会包含全部课程信息，只需要在请求的时候<code>isTry=false</code>即可。</p>
+<p><strong>作用</strong></p>
+<p>用来获取大纲下的全部课程的课程名</p>
+<p>如下：</p>
+<img class="-20201126184205038.png">
+
+
+<p><strong>格式化后的JSON</strong></p>
+<img class="-20201126184037812.png">
+
+<p><strong>关键字段1</strong>：<code>ccVideoId</code>，课程id加密之后的字段，只需要获取到全部即可</p>
+<p><strong>数据处理</strong>：</p>
+<ul>
+<li>正则匹配<code>[A-Z0-9]&#123;32&#125;</code></li>
+<li>结果存储在videoId.txt文件中</li>
+</ul>
+<img class="-20201126185910928.png">
+
+<h5 id="获取真实的视频播放链接"><a href="#获取真实的视频播放链接" class="headerlink" title="获取真实的视频播放链接"></a>获取真实的视频播放链接</h5><p><strong>请求地址：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://p.bokecc.com/servlet/getvideofile?vid=9BE07F17C38EFAE89C33DC5901307461&amp;siteid=78665FEFxxxxxxxx&amp;vc=xxxxxxx</span><br></pre></td></tr></table></figure>
+
+<p>分析：</p>
+<p>请求拼接了<code>vid</code>+<code>siteid</code>+<code>vc</code>，其中这些数据在前面已经获取到，按需拼接即可。</p>
+<p><strong>处理之后的响应体内容：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;playurl&quot;</span>:<span class="string">&quot;http://cd15-ccd1-2.play.bokecc.com/flvs/78665FEF083498AB/2020-05-11/9BE07F17C38EFAE89C33DC5901307461-20.m3u8?t=1605160103&amp;key=1808B08473AAA7F5225DF2CB9CB8BE72&amp;tpl=10&amp;tpt=231&quot;</span>,<span class="string">&quot;mediatype&quot;</span>:<span class="number">1</span>,<span class="string">&quot;desp&quot;</span>:<span class="string">&quot;高清&quot;</span>,<span class="string">&quot;backupurl&quot;</span>:<span class="string">&quot;http://cd11-ccd1-2.play.bokecc.com/flvs/78665FEF083498AB/2020-05-11/9BE07F17C38EFAE89C33DC5901307461-20.m3u8?t=1605160103&amp;key=1808B08473AAA7F5225DF2CB9CB8BE72&amp;tpl=10&amp;tpt=231&quot;</span>,<span class="string">&quot;quality&quot;</span>:<span class="number">20</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关键字段1：<code>playurl</code>+<code>backurl</code>，播放链接</p>
+<p>关键字段2:<code>-20.m3u8</code>或者<code>-30.m3u8</code>，这是播放清晰度，部分视频无超清画质</p>
+<p>关键字段3：<code>t=1605160103</code>，时间戳，链接失效的时间</p>
+<p>关键字段4：<code>key</code>，m3u8的解密密钥</p>
+<p>服务器返回了<code>playurl</code>和<code>backurl</code>两份播放链接，选择其一，正则表达式，将内容匹配出来即可。</p>
+<ul>
+<li>正则表达式匹配播放的URL</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#高清</span></span><br><span class="line">http://cd15-ccd1-2.play.bokecc.com/flvs/[A-Z0-9]*/\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;/[A-Z0-9]&#123;32&#125;-20.m3u8\?t=\d&#123;10&#125;\&amp;\key=[A-Z0-9]&#123;32&#125;\&amp;tpl=\d&#123;2&#125;\&amp;tpt=\d&#123;3&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#超清</span></span><br><span class="line">http://cd15-ccd1-2.play.bokecc.com/flvs/[A-Z0-9]*/\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;/[A-Z0-9]&#123;32&#125;-30.m3u8\?t=\d&#123;10&#125;\&amp;\key=[A-Z0-9]&#123;32&#125;\&amp;tpl=\d&#123;2&#125;\&amp;tpt=\d&#123;3&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="4、注意事项"><a href="#4、注意事项" class="headerlink" title="4、注意事项"></a>4、注意事项</h4><p>1、抓取课程需要在调试界面将设备改为模拟移动设备，或者在移动设备上抓包。</p>
+<p>2、需要开启设备需要https解密，并且信任证书。</p>
+<p>3、获取的部分关键字段生存时间短</p>
+<h4 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a>5、总结</h4><p>1、用户鉴权最好是云端校验</p>
+<p>2、m3u8加密并直接携带解密的key</p>
+<p>3、对于异常的IP请求要做处理</p>
+<p>4、接口的鉴权再完善些</p>
+<h5 id="6、声明"><a href="#6、声明" class="headerlink" title="6、声明"></a>6、声明</h5><p>仅供学习研究使用，不得将上述内容用于商业或者非法用途，否则一切后果请自负。</p>
 
       
 
@@ -197,7 +306,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/26/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/11/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90/">展开全文 >></a>
         </p>
       
 
