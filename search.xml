@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo博客的一些问题</title>
+      <link href="post/594264f2/"/>
+      <url>post/594264f2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><ol><li>图片显示</li><li>多标签编写</li><li>博客草稿修改</li><li>abbrlink插件</li><li>yilia主题头像设置</li></ol><a id="more"></a><h5 id="1-图片显示"><a href="#1-图片显示" class="headerlink" title="1.图片显示"></a>1.图片显示</h5><p>1、安装**<code>CodeFalling/hexo-asset-image</code>**插件</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-asset-image --save</code></pre><p>2、在<code>_config.yml</code>配置文件中修改**<code>post_asset_folder</code>**属性值</p><pre class=" language-bash"><code class="language-bash">post_asset_folder: <span class="token boolean">true</span></code></pre><p>3、运行命令，使用新的配置</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#清除就配置文件生成的项目</span>hexo clean<span class="token comment" spellcheck="true">#用新的配置文件生成项目</span>hexo g</code></pre><p>注意：新配置会自动在<code>source\_posts</code>文件夹下生成文章的同名文件夹，需要将你使用的图片存放在<strong>文章同名文件夹</strong>中即可</p><p>4、文章中使用图片</p><pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>文章同名文件夹/图片名.jgp<span class="token punctuation">)</span></code></pre><h5 id="2-多标签编写"><a href="#2-多标签编写" class="headerlink" title="2.多标签编写"></a>2.多标签编写</h5><p>在默认生成的头文件中编写</p><p><strong>单标签</strong>：</p><pre class=" language-bash"><code class="language-bash">title:date: tags: hexo博客categories: hexo</code></pre><p><strong>多标签</strong>：</p><pre class=" language-bash"><code class="language-bash">tags: <span class="token punctuation">[</span>标签1, 标签2, 标签3<span class="token punctuation">]</span></code></pre><p><strong>注意：</strong>1、需要使用英文格式的逗号+空格</p><p>​            2、<code>tags:</code>后面要加<strong>空格</strong>（hexo的配置文件尤其不能忘记）</p><h5 id="3-博客草稿修改问题"><a href="#3-博客草稿修改问题" class="headerlink" title="3.博客草稿修改问题"></a>3.博客草稿修改问题</h5><p>我们使用<code>hexo n</code>生成新的博客，会使用默认的草稿文件来生成头文件，但是包含的内容比较少，我们可以按需添加</p><p><strong>修改</strong></p><p>目录：<code>\scaffolds\post.md</code></p><pre class=" language-bash"><code class="language-bash">title: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#123; title &amp;#125;&amp;#125;</span>date: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#123; date &amp;#125;&amp;#125;</span>tags:categories:</code></pre><h5 id="4-abbrlink插件"><a href="#4-abbrlink插件" class="headerlink" title="4.abbrlink插件"></a>4.abbrlink插件</h5><p>1、安装插件</p><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-abbrlink --save</code></pre><p>2、修改<code>_config.yml</code>配置文件</p><pre class=" language-bash"><code class="language-bash">permalink: posts/:abbrlink/</code></pre><pre class=" language-java"><code class="language-java">abbrlink<span class="token operator">:</span>  alg<span class="token operator">:</span> crc32  rep<span class="token operator">:</span> hex</code></pre><p>注意：不要修改为<code>permalink: posts/abbrlink.html/</code>或者</p><p><code>permalink: posts/abbrlink/</code>都会出现问题，前者会出现生成的文章访问不到图片，</p><p>后者会出现所有的文章的链接都是一样的，异常情况。</p><h5 id="5-yilia主题头像设置"><a href="#5-yilia主题头像设置" class="headerlink" title="5.yilia主题头像设置"></a>5.yilia主题头像设置</h5><p>1、主题配置文件目录</p><p>目录：<code>\themes\yilia\_config.yml</code></p><p>2、存放头像的目录</p><p>目录：<code>\themes\yilia\source\assets</code></p><p>没有<code>assets</code>文件夹的，新建一个，将图片放进去。</p><p>3、修改配置文件</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#你的头像url</span>avatar: /assets/1.JPG</code></pre><p>注意：1、<code>avatar:</code>后面的<strong>空格</strong>不要忘记了</p><p>​            2、要使用<code>/assets/图片名.图片格式</code>，<code>/assets</code>前面的<code>/</code>不能忘记加</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>重定向表</title>
       <link href="post/3d854959/"/>
       <url>post/3d854959/</url>
