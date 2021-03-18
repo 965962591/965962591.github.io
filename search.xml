@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>记录一次面试题-关于有效括号数量统计</title>
+      <link href="post/c1139cc2/"/>
+      <url>post/c1139cc2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="统计有效括号数量"><a href="#统计有效括号数量" class="headerlink" title="统计有效括号数量"></a>统计有效括号数量</h2><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>统计有效括号总数，</p><p>eg：<code>()</code>        结果：1</p><p>​        <code>(())</code>    结果：2</p><p>​        <code>(())))</code> 结果：2</p><p>只有左括号和右括号可以匹配成对则称为<strong>有效括号</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;)()()((()&quot;</span></span><br><span class="line">calc()</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> count_left=<span class="number">0</span><span class="comment">//统计左括号</span></span><br><span class="line">    <span class="keyword">var</span> conut_right=<span class="number">0</span><span class="comment">//统计右括号</span></span><br><span class="line">    <span class="keyword">var</span> count=<span class="number">0</span><span class="comment">//统计有效括号</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=str.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(str[i]==<span class="string">&quot;(&quot;</span>)&#123;</span><br><span class="line">            count_left++<span class="comment">//统计左边括号</span></span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i]==<span class="string">&quot;)&quot;</span> &amp;&amp; count_left!=<span class="number">0</span>)&#123;</span><br><span class="line">           conut_right++<span class="comment">//统计右边有效括号</span></span><br><span class="line">           <span class="keyword">if</span>(count_left==conut_right)&#123;</span><br><span class="line">               count++<span class="comment">//统计有效括号</span></span><br><span class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(str[i-<span class="number">1</span>]==<span class="string">&quot;(&quot;</span> &amp;&amp; str[i]==<span class="string">&quot;)&quot;</span>)&#123;</span><br><span class="line">               <span class="comment">//当出现左右括号在一起的情况直接count++</span></span><br><span class="line">               count++</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(count);<span class="comment">//3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>在<code>(</code>不存在的时候，循环遍历到<code>)</code>时是不算此时<code>)</code>是不算有效右括号的，因为不存在<code>(</code>与之匹配。</p><p>1、左右括号不相连</p><p>​    （1）、统计<code>(</code>的数量</p><p>​    （2）、统计<code>)</code>的数量</p><p>​    （3）、判断左右括号是否数量相等，相等则表示<strong>有效括号</strong></p><p>2、若出现<strong>左右括号在一起</strong>的情况，直接将有效括号的<code>count++</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>记录一次面试过程</title>
       <link href="post/50cc2970/"/>
       <url>post/50cc2970/</url>
